@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Oscar Lopez Hoffmann — Desarrollador Full Stack en proceso. Ecosistema digital impulsado por Python, SQL, Linux, Git e Inteligencia Artificial." />
+  <meta name="author" content="Oscar Lopez Hoffmann" />
+  <title>Oscar Lopez Hoffmann — Orbit AI & Full Stack</title>
+
+  <!-- Google Fonts: Inter & Space Grotesk + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="orbit-theme">
+
+  <!-- ░░░ AMBIENT BACKGROUND GLOW ░░░ -->
+  <div class="ambient-glow-wrapper" aria-hidden="true">
+    <div class="glow-orb glow-top"></div>
+    <div class="glow-orb glow-center"></div>
+    <div class="glow-orb glow-bottom"></div>
+    <div class="stars-canvas" id="starsBg"></div>
+    <div class="orbit-grid-matrix"></div>
+  </div>
+
+  <!-- ░░░ FLOATING GLASS NAVBAR (ORBIT PILL) ░░░ -->
+  <header class="header-nav-wrap">
+    <nav class="nav-pill" id="navbar">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-orbit-icon">
+          <div class="core-dot"></div>
+          <div class="mini-ring"></div>
+        </div>
+        <span class="brand-name">oscar<span class="accent-text">.lh</span></span>
+      </a>
+
+      <ul class="nav-menu" id="navLinks">
+        <li><a href="#about" class="nav-item">Sobre mí</a></li>
+        <li><a href="#ecosystem" class="nav-item">Ecosistema</a></li>
+        <li><a href="#projects" class="nav-item">Proyectos</a></li>
+        <li><a href="#contact" class="nav-item">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="nav-cta-btn">
+          <span>Conectar</span>
+          <i class="ph ph-arrow-up-right"></i>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ░░░ HERO SECTION: ORBIT AI AGENT ANIMATION ░░░ -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <!-- Header Text Block -->
+        <div class="hero-intro">
+          <div class="orbit-badge" data-reveal>
+            <span class="pulse-indicator"></span>
+            <span class="badge-text">✦ Orbit Ecosystem · Full Stack en proceso</span>
+          </div>
+
+          <h1 class="hero-heading" data-reveal>
+            Hola, soy <span class="gradient-shimmer">Oscar Lopez Hoffmann</span><br />
+            <span class="typewriter-line"><span id="typewriter"></span></span>
+          </h1>
+
+          <p class="hero-quote" data-reveal>
+            «Estoy tratando de moldear mi vida alrededor del mundo virtual de manera <span class="highlight">entretenida e inusual</span>.»
+          </p>
+
+          <div class="hero-btn-group" data-reveal>
+            <a href="#projects" class="btn-orbit-primary">
+              <span class="btn-glow"></span>
+              <span class="btn-content">
+                <i class="ph ph-folder-open"></i>
+                Ver proyectos de carrera
+              </span>
+            </a>
+            <a href="#contact" class="btn-orbit-secondary">
+              <i class="ph ph-chat-circle-dots"></i>
+              <span>Hablemos</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3D ORBIT HERO ANIMATION -->
+        <div class="orbit-stage" id="orbitStage" data-reveal>
+          <div class="orbit-scene">
+            
+            <!-- Central Glass Core -->
+            <div class="orbit-core">
+              <div class="core-halo"></div>
+              <div class="core-glass">
+                <div class="core-initials">OLH</div>
+                <div class="core-light-reflection"></div>
+              </div>
+              <div class="core-status-pill">
+                <span class="dot-online"></span>
+                <span>Active Core</span>
+              </div>
+            </div>
+
+            <!-- Concentric Orbital Tracks with AI Agent Nodes -->
+            <!-- Track 1: Inner Orbit (Python & SQL) -->
+            <div class="orbit-track track-1">
+              <div class="orbit-node node-python" title="Python Backend">
+                <div class="node-icon"><i class="ph ph-file-py"></i></div>
+                <span class="node-label">Python Agent</span>
+              </div>
+              <div class="orbit-node node-sql" title="Bases de datos SQL">
+                <div class="node-icon"><i class="ph ph-database"></i></div>
+                <span class="node-label">SQL Engine</span>
+              </div>
+            </div>
+
+            <!-- Track 2: Middle Orbit (Linux & IA) -->
+            <div class="orbit-track track-2">
+              <div class="orbit-node node-linux" title="Entorno Linux">
+                <div class="node-icon"><i class="ph ph-terminal-window"></i></div>
+                <span class="node-label">Linux OS</span>
+              </div>
+              <div class="orbit-node node-ai" title="Explorando Inteligencia Artificial">
+                <div class="node-icon"><i class="ph ph-brain"></i></div>
+                <span class="node-label">AI Neural Agent</span>
+                <span class="node-tag">Explore</span>
+              </div>
+            </div>
+
+            <!-- Track 3: Outer Orbit (Git & Full Stack Web) -->
+            <div class="orbit-track track-3">
+              <div class="orbit-node node-git" title="Control de Versiones Git">
+                <div class="node-icon"><i class="ph ph-git-branch"></i></div>
+                <span class="node-label">Git Workflow</span>
+              </div>
+              <div class="orbit-node node-web" title="Full Stack Web">
+                <div class="node-icon"><i class="ph ph-code"></i></div>
+                <span class="node-label">Web Ecosystem</span>
+              </div>
+            </div>
+
+            <!-- Ambient Orbit Particle Ring -->
+            <div class="orbit-particles-ring"></div>
+          </div>
+
+          <!-- Live Agent Status Console Bar -->
+          <div class="orbit-console-bar">
+            <div class="console-item">
+              <span class="console-label">Modo:</span>
+              <span class="console-value"><i class="ph ph-sparkle"></i> Aprendizaje continuo</span>
+            </div>
+            <div class="console-sep"></div>
+            <div class="console-item">
+              <span class="console-label">Stack Base:</span>
+              <span class="console-value">Python · SQL · Linux · Git</span>
+            </div>
+            <div class="console-sep"></div>
+            <div class="console-item">
+              <span class="console-label">Foco Actual:</span>
+              <span class="console-value accent-glow">Exploración de IA</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ░░░ ABOUT ME: BENTO GRID ░░░ -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="sub-badge">Sobre mí</span>
+          <h2 class="section-title">Mi trayectoria en el <span class="gradient-shimmer">universo digital</span></h2>
+          <p class="section-subtext">Construyendo una visión técnica única entre proyectos académicos y curiosidad constante.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Bento 1: Story & Vision (Large) -->
+          <div class="bento-card bento-story" data-reveal>
+            <div class="card-glow-layer"></div>
+            <div class="bento-header">
+              <div class="card-chip"><i class="ph ph-compass"></i> Filosofía</div>
+              <span class="card-meta">Perfil Profesional</span>
+            </div>
+            <h3>Moldear el mundo virtual a mi manera</h3>
+            <p>
+              Actualmente compagino mis actividades laborales con mi vocación por el desarrollo de software.
+              Mi base sólida proviene de los <strong>proyectos realizados a lo largo de mi carrera universitaria</strong>,
+              donde aprendí a estructurar la lógica, resolver problemas y trabajar con bases de datos.
+            </p>
+            <p>
+              Me fascina la idea de interactuar con la tecnología de una forma no convencional: combinando 
+              <strong>desarrollo Full Stack</strong> con la nueva ola de <strong>Inteligencia Artificial</strong> para crear
+              herramientas divertidas, útiles e interesantes.
+            </p>
+            <div class="quote-box">
+              <i class="ph ph-quotes"></i>
+              <span>«Transformar la pantalla en un lienzo de lógica, autonomía y entretenimiento.»</span>
+            </div>
+          </div>
+
+          <!-- Bento 2: Interactive Terminal Preview -->
+          <div class="bento-card bento-terminal" data-reveal>
+            <div class="terminal-bar">
+              <div class="terminal-dots">
+                <span class="td red"></span>
+                <span class="td yellow"></span>
+                <span class="td green"></span>
+              </div>
+              <div class="terminal-title">oscar@orbit-linux:~$</div>
+            </div>
+            <div class="terminal-body font-mono">
+              <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></div>
+              <div class="t-out">Oscar Lopez Hoffmann — Desarrollador Full Stack en proceso</div>
+              <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat interests.txt</span></div>
+              <div class="t-out highlight-cyan">["Python", "SQL", "Git", "Linux", "Inteligencia_Artificial"]</div>
+              <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">python -m ai.explore --status</span></div>
+              <div class="t-out text-success">✓ Módulo de IA inicializado: explorando modelos y agentes.</div>
+              <div class="t-line"><span class="t-prompt">$</span> <span class="t-cursor">█</span></div>
+            </div>
+          </div>
+
+          <!-- Bento 3: Tech Pillars -->
+          <div class="bento-card bento-pillars" data-reveal>
+            <div class="bento-header">
+              <div class="card-chip"><i class="ph ph-stack"></i> Tecnologías</div>
+            </div>
+            <h4>Eje Tecnológico</h4>
+            <div class="pills-collection">
+              <div class="tech-pill"><i class="ph ph-file-py"></i> Python</div>
+              <div class="tech-pill"><i class="ph ph-database"></i> SQL Relacional</div>
+              <div class="tech-pill"><i class="ph ph-terminal-window"></i> Linux / Bash</div>
+              <div class="tech-pill"><i class="ph ph-git-branch"></i> Git &amp; GitHub</div>
+              <div class="tech-pill tech-pill-featured"><i class="ph ph-brain"></i> Inteligencia Artificial</div>
+              <div class="tech-pill"><i class="ph ph-code"></i> HTML5 / CSS3 / JS</div>
+              <div class="tech-pill"><i class="ph ph-cloud"></i> Cloudflare</div>
+            </div>
+          </div>
+
+          <!-- Bento 4: Metrics / Stats -->
+          <div class="bento-card bento-metrics" data-reveal>
+            <div class="metric-item">
+              <div class="metric-number" data-target="100">0</div>
+              <span class="metric-sign">%</span>
+              <p>Motivación por explorar nuevas tecnologías</p>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <div class="metric-number" data-target="15">0</div>
+              <span class="metric-sign">+</span>
+              <p>Proyectos académicos y prácticas realizadas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░ ECOSYSTEM / SERVICES ░░░ -->
+    <section class="section ecosystem-section" id="ecosystem">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="sub-badge">Ecosistema &amp; Enfoque</span>
+          <h2 class="section-title">Agentes del <span class="gradient-shimmer">desarrollo</span></h2>
+          <p class="section-subtext">Las disciplinas y herramientas en las que centro mi aprendizaje y trabajo técnico.</p>
+        </div>
+
+        <div class="agent-cards-grid">
+          <!-- Card 1 -->
+          <div class="agent-card" data-reveal>
+            <div class="agent-card-top">
+              <div class="agent-avatar-icon bg-py">
+                <i class="ph ph-file-py"></i>
+              </div>
+              <div class="agent-status-badge">Backend Core</div>
+            </div>
+            <h3>Python &amp; Lógica</h3>
+            <p>Estructuración de scripts, automatización de tareas y desarrollo de algoritmos en código limpio y modular.</p>
+            <div class="agent-skills-list">
+              <span><i class="ph ph-check"></i> Scripts y automatizaciones</span>
+              <span><i class="ph ph-check"></i> Programación orientada a objetos</span>
+              <span><i class="ph ph-check"></i> Procesamiento de datos</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="agent-card featured-orbit-card" data-reveal>
+            <div class="featured-glow-line"></div>
+            <div class="agent-card-top">
+              <div class="agent-avatar-icon bg-sql">
+                <i class="ph ph-database"></i>
+              </div>
+              <div class="agent-status-badge badge-active">Base Fundamental</div>
+            </div>
+            <h3>SQL &amp; Datos Relacionales</h3>
+            <p>Diseño de bases de datos, creación de esquemas, relaciones entre entidades y consultas para persistencia segura.</p>
+            <div class="agent-skills-list">
+              <span><i class="ph ph-check"></i> Diagramas Entidad-Relación</span>
+              <span><i class="ph ph-check"></i> Consultas complejas (JOINs, vistas)</span>
+              <span><i class="ph ph-check"></i> Normalización de datos</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="agent-card" data-reveal>
+            <div class="agent-card-top">
+              <div class="agent-avatar-icon bg-linux">
+                <i class="ph ph-terminal-window"></i>
+              </div>
+              <div class="agent-status-badge">Entornos</div>
+            </div>
+            <h3>Linux &amp; Git Workflow</h3>
+            <p>Gestión de entornos en Linux, manejo fluido de terminal y versionado colaborativo mediante flujos Git.</p>
+            <div class="agent-skills-list">
+              <span><i class="ph ph-check"></i> Shell y comandos de terminal</span>
+              <span><i class="ph ph-check"></i> Ramas, commits y merge en Git</span>
+              <span><i class="ph ph-check"></i> Configuración de entornos de trabajo</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="agent-card" data-reveal>
+            <div class="agent-card-top">
+              <div class="agent-avatar-icon bg-ai">
+                <i class="ph ph-brain"></i>
+              </div>
+              <div class="agent-status-badge badge-future">Exploración</div>
+            </div>
+            <h3>Inteligencia Artificial</h3>
+            <p>Estudio práctico de modelos de lenguaje, flujos de agentes autónomos y aprovechamiento de IA para potenciar aplicaciones.</p>
+            <div class="agent-skills-list">
+              <span><i class="ph ph-check"></i> Experimentación con LLMs</span>
+              <span><i class="ph ph-check"></i> Prompt engineering &amp; agentes</span>
+              <span><i class="ph ph-check"></i> Integración de herramientas de IA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░ PROJECTS SECTION ░░░ -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-badge-center">
+          <span class="sub-badge">Portafolio</span>
+          <h2 class="section-title">Proyectos de la <span class="gradient-shimmer">Carrera</span></h2>
+          <p class="section-subtext">Trabajos y proyectos prácticos que consolidan mis conocimientos durante mi trayectoria universitaria.</p>
+        </div>
+
+        <div class="orbit-projects-grid">
+          
+          <!-- Project 1 (Featured Large) -->
+          <article class="orbit-project-card featured-project" data-reveal>
+            <div class="project-banner project-banner-1">
+              <div class="project-banner-overlay">
+                <a href="https://github.com/oscarlhoff" target="_blank" rel="noopener" class="project-external-btn" aria-label="Ver en GitHub">
+                  <i class="ph ph-github-logo"></i>
+                  <span>Ver repositorio</span>
+                </a>
+              </div>
+              <div class="orbit-project-tag">Académico Destacado</div>
+            </div>
+            <div class="project-content">
+              <div class="project-tech-tags">
+                <span class="pt-tag">SQL</span>
+                <span class="pt-tag">Python</span>
+                <span class="pt-tag">Base de Datos</span>
+                <span class="pt-tag">Backend</span>
+              </div>
+              <h3>Sistema de Gestión Relacional de Datos</h3>
+              <p>
+                Proyecto universitario enfocado en la concepción integral de una base de datos: desde la recolección
+                de requerimientos hasta el modelado de tablas en SQL y scripts en Python para la administración de registros.
+              </p>
+              <div class="project-footer">
+                <span class="project-status-text"><i class="ph ph-check-circle"></i> Completado en carrera</span>
+                <a href="https://github.com/oscarlhoff" target="_blank" rel="noopener" class="inline-link">
+                  GitHub <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="orbit-project-card" data-reveal>
+            <div class="project-banner project-banner-2">
+              <div class="project-banner-overlay">
+                <a href="https://github.com/oscarlhoff" target="_blank" rel="noopener" class="project-external-btn" aria-label="Ver en GitHub">
+                  <i class="ph ph-github-logo"></i>
+                  <span>Ver código</span>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tech-tags">
+                <span class="pt-tag">Python</span>
+                <span class="pt-tag">Linux</span>
+                <span class="pt-tag">Git</span>
+              </div>
+              <h3>Scripts de Automatización &amp; Algoritmos</h3>
+              <p>
+                Solución de ejercicios complejos y herramientas CLI para procesamiento de archivos en consola Linux, versionadas con Git.
+              </p>
+              <div class="project-footer">
+                <span class="project-status-text"><i class="ph ph-terminal"></i> Terminal / CLI</span>
+                <a href="https://github.com/oscarlhoff" target="_blank" rel="noopener" class="inline-link">
+                  Explorar <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="orbit-project-card" data-reveal>
+            <div class="project-banner project-banner-3">
+              <div class="project-banner-overlay">
+                <a href="https://github.com/oscarlhoff" target="_blank" rel="noopener" class="project-external-btn" aria-label="Ver en GitHub">
+                  <i class="ph ph-github-logo"></i>
+                  <span>Ver código</span>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tech-tags">
+                <span class="pt-tag">Full Stack</span>
+                <span class="pt-tag">AI Concept</span>
+                <span class="pt-tag">Cloudflare</span>
+              </div>
+              <h3>Página Personal &amp; Laboratorio Web</h3>
+              <p>
+                Plataforma personal interactiva inspirada en interfaces futuristas de agentes IA, optimizada para despliegue rápido.
+              </p>
+              <div class="project-footer">
+                <span class="project-status-text"><i class="ph ph-globe"></i> En vivo</span>
+                <a href="https://github.com/oscarlhoff" target="_blank" rel="noopener" class="inline-link">
+                  Explorar <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░ CONTACT SECTION ░░░ -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-orbit-panel" data-reveal>
+          <div class="panel-glow"></div>
+          
+          <div class="panel-inner">
+            <div class="contact-header">
+              <span class="sub-badge">Transmisión &amp; Enlace</span>
+              <h2 class="section-title">¡Conectemos en el <span class="gradient-shimmer">mundo virtual!</span></h2>
+              <p class="panel-desc">
+                ¿Te interesa charlar sobre programación, compartir proyectos o colaborar? Mi canal de comunicación está siempre abierto.
+              </p>
+            </div>
+
+            <!-- Email Highlight Card -->
+            <div class="contact-direct-card">
+              <div class="email-info">
+                <span class="email-tag">Correo oficial</span>
+                <span class="email-address" id="emailText">oscarlhoffmann@gmail.com</span>
+              </div>
+              <div class="email-actions">
+                <button class="btn-copy" id="btnCopyEmail" title="Copiar correo">
+                  <i class="ph ph-copy" id="copyIcon"></i>
+                  <span id="copyFeedback">Copiar</span>
+                </button>
+                <a href="mailto:oscarlhoffmann@gmail.com" class="btn-send-mail">
+                  <i class="ph ph-envelope-simple"></i>
+                  <span>Escribir correo</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Social / GitHub Connect Grid -->
+            <div class="channels-grid">
+              <a href="https://github.com/oscarlhoff" target="_blank" rel="noopener" class="channel-card">
+                <div class="channel-icon github-icon"><i class="ph ph-github-logo"></i></div>
+                <div class="channel-details">
+                  <span class="channel-title">GitHub</span>
+                  <span class="channel-handle">github.com/oscarlhoff</span>
+                </div>
+                <i class="ph ph-arrow-up-right channel-arrow"></i>
+              </a>
+
+              <div class="channel-card info-channel">
+                <div class="channel-icon pulse-icon"><i class="ph ph-sparkle"></i></div>
+                <div class="channel-details">
+                  <span class="channel-title">Estado Actual</span>
+                  <span class="channel-handle">Explorando IA y proyectos web</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ░░░ FOOTER ░░░ -->
+  <footer class="orbit-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="brand-orbit-icon small">
+          <div class="core-dot"></div>
+          <div class="mini-ring"></div>
+        </div>
+        <span class="brand-name">oscar<span class="accent-text">.lh</span></span>
+      </div>
+      
+      <p class="footer-copy">
+        © 2026 Oscar Lopez Hoffmann. Moldeando el mundo virtual con Python, SQL, Linux &amp; IA.
+      </p>
+
+      <a href="#hero" class="back-to-orbit" aria-label="Volver arriba">
+        <i class="ph ph-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
